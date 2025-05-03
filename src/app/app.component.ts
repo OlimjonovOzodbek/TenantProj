@@ -17,6 +17,7 @@ export class AppComponent {
   tenant?: Tenant;
   config?: ThemeModel;
   error: string = '';
+  backgroundColor: string = 'dark';
 
   constructor(private tenantService: TenantServiceService) {}
 

@@ -8,13 +8,13 @@ import { ThemeModel } from '../models/Theme';
   providedIn: 'root'
 })
 export class TenantServiceService {
-
+apiurl = "https://localhost:7120/api/TenantService"
   constructor(private _http: HttpClient) 
   { 
     
   }
   getTenantsById(id: number): Observable<Tenant> {
-    return this._http.get<Tenant>("");
+    return this._http.get<Tenant>(this.apiurl+'/1');
   }
   getThemeById(id: number): Observable<ThemeModel> {
     return this._http.get<ThemeModel>("");
