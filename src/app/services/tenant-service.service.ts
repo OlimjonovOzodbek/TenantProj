@@ -15,7 +15,7 @@ export class TenantServiceService {
     
   }
   getTenantsById(id: number): Observable<Tenant> {
-    return this._http.get<Tenant>(this.apiurl+'/1');
+    return this._http.get<Tenant>(this.apiurl+'/'+ id);
   }
   getThemeById(id: number): Observable<ThemeModel> {
     return this._http.get<ThemeModel>("");
